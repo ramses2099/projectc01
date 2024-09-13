@@ -135,3 +135,33 @@ double prices[10] = {12.0, 25.5,3.5}
 
 ## typedef = reserved keyword that gives an existing datatype a "nickname"
 
+
+## Symbolic Constants and Macros
+
+- #define NAME Value
+
+## Pointer and array
+- A pointer is a variable that contains the address of a variable.
+- Pointer is a special variable that is capable of storing some address
+- It points to a memory location where the first byte is stored
+
+## Value of operator/ indirector operator/ deference operator
+- is an operator that is used to access the value stored at the location pointed by the pointer
+
+- * = Value of operator
+
+## We can also change the value of the object pointed by the pointer
+
+## Never apply the inderction operator to the uninitialized pointer
+- for example
+``` int *ptr;
+    printf("%d", *ptr)
+```
+## Assigning value to an uninitialised pointer is dangerous
+- for example
+``` int *ptr;
+    *ptr = 1
+```
+- output
+Segmentation Fault (SIGSEGV)
+Usually, segmentation fault is caused by program trying to read or write an illegal memory location

@@ -1,23 +1,21 @@
 #include <stdio.h>
+#include <stdlib.h>
 #include <stdbool.h>
 #include <string.h>
 
-//struct
-typedef struct{
-    char name[20];
-    int score;
-} User;
 
 int main() {
     system("cls");
     
-    User p1;
+    int x = 10;
+    int *ptr = &x;
+    printf("the value of x = %d\n", x);
+    printf("the value od the ptr = %d", *ptr);
 
-    strcpy(p1.name, "juan");
-    p1.score = 100;
-
-    printf("Player 1 name: %s\n", p1.name);
-    printf("Player 1 score: %d\n", p1.score);
-
+    *ptr = 20;
+    printf("\nNow the value of x = %d\n", x);
+    printf("the value of the ptr = %d", *ptr);
+    
+    return 0;
  
 }
