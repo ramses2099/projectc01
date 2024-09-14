@@ -165,3 +165,52 @@ double prices[10] = {12.0, 25.5,3.5}
 - output
 Segmentation Fault (SIGSEGV)
 Usually, segmentation fault is caused by program trying to read or write an illegal memory location
+
+## q = p asigned the address of p to q
+## *q = *p asigned the value of p to q
+
+## Never try to return the value of local variable of an automatic variable
+- for example
+``` 
+    int *func(){
+        int i = 10
+        return &i;
+    }
+
+    int main() {
+        int *p = func()
+        printf("%d", *p)
+    }
+```
+- Warning: function returns address of local variable
+
+## In C, * symbol has different meanings depending on the context in which its used.
+
+## Use %p as a format specifier in printf function
+
+## Options (a) and (e) are the aliases of variable i
+
+## pointer arimethic
+
+## Undefined Behavior
+- Performing arithmetic on pointers which are not pointing to array element leads to
+undefined behaviour
+
+- If two pointers are pointing to different arrays then performing subtracion between them leads to undefined behavior
+
+## Post increment
+- p++
+## Pre increment
+- ++p
+
+## Use relational operators (<,>,>=,<=)and equiality operators (==, !=) to compare pointers.
+## Only posisble when both pointers point to same array.
+## Output depends upon the relative positions of both the pointers.
+## It is true that we can use array names as pointers, but assigning a new address to them is not possible.
+
+## Different Betweeen Row Major and Column Major order
+- Row Major order: Elements are stored row by row
+
+- Column Major order: Elements are stored column by column
+
+## C stores multidimensional arrays in row major order
